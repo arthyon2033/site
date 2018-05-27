@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height:100%;
+}
+
+* html .geral {
+    height: 100%;
+}
+
+.geral {
+    min-height:100%;
+    position:relative;
+    background-color: rgba(0, 84, 133, 0.5);
+    padding-bottom: 70px;
+}
+
+.footer-fundo {
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+
+.titulo{
+    text-align: center;
+    margin: 2% 2% 2% 2%;
+}
