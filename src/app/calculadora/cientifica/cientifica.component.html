@@ -1,7 +1,54 @@
 <div class="container">
 
   <h3 class="titulo">
-    Pagina da Cientifica
+    Scientific Calculator
   </h3>
+
+  <div style="margin: 0 auto 0 auto; width: 400px">
+
+    <div class="card text-center" style="padding: 10px 10px 10px 10px; background-color: black; border: black">
+      <canvas #canvasEl width=400 height=200 id="canvas" style="height: 200px; width: 380px; background-color: white; margin-bottom: 5px"></canvas>
+      <input type="text" value="{{ calcServ.display }}" style="text-align: right" readonly>
+      <br>
+
+      <div class="container">
+        <div class="row">
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-primary col" value="7" #sete (click)="append('7')">7</button>
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-primary col" value="8" #oito (click)="append('8')">8</button>
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-primary col" value="9" #nove (click)="append('9')">9</button>
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-secondary col" value="*" #mult (click)="append('*')">*</button>
+          <br>
+        </div>
+        <div class="row">
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-primary col-sm" value="4" #quatro (click)="append('4')">4</button>
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-primary col-sm" value="5" #cinco (click)="append('5')">5</button>
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-primary col-sm" value="6" #seis (click)="append('6')">6</button>
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-secondary col-sm" value="/" #div (click)="append('/')">/</button>
+          <br>
+        </div>
+        <div class="row">
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-primary col-sm" value="1" #um (click)="append('1')">1</button>
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-primary col-sm" value="2" #dois (click)="append('2')">2</button>
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-primary col-sm" value="3" #tres (click)="append('3')">3</button>
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-secondary col-sm" value="+" #soma (click)="append('+')">+</button>
+          <br>
+        </div>
+        <div class="row">
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-danger col-sm" value="del" #del (click)="deletaTela()">D</button>
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-primary col-sm" value="0" #zero (click)="append('0')">0</button>
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-success col-sm" value="=" #igual (click)="append('=') ; mostraResultado()">=</button>
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-secondary col-sm" value="-" #sub (click)="append('-')">-</button>
+        </div>
+        <div class="row">
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-warning col-sm" value="x" #mult (click)="append('x')">X</button>
+          <button style="margin: 2px 2px 2px 2px" class="btn btn-success col-sm" value="p" #plot (click)="draw()">Plot</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <h1 style="color: red; text-align: center; margin-top: 20px">Sorry, this page is under construction</h1>
 
 </div>

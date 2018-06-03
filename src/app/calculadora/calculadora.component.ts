@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CalculadoraService } from './calculadora.service';
 
 @Component({
   selector: 'app-calculadora',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculadoraComponent implements OnInit {
 
-  constructor() { }
+  constructor(public calcServ: CalculadoraService) { }
 
   ngOnInit() {
+  }
+
+  display = this.calcServ.display;
+
+  append(element: string){
+    this.calcServ.append(element);
+  }
+
+  mostraResultado(){
+    this.calcServ.mostraResultado();
+  }
+
+  deletaTela(){
+    this.calcServ.deletaTela();
   }
 
 }
