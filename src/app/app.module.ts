@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { ModalModule } from 'ngx-bootstrap';
 
 import { ROUTES } from './app.routing';
 
@@ -36,7 +37,8 @@ import { CalculadoraService } from './calculadora/calculadora.service';
     BrowserModule,
     RouterModule.forRoot(ROUTES),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalModule.forRoot()
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, CentralService, AuthGuard, CalculadoraService],
   bootstrap: [AppComponent]
