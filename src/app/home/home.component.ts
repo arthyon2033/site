@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalLoginComponent } from '../modais/modal-login/modal-login.component';
 
 @Component({
   selector: 'app-home',

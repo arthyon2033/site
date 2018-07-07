@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { LogIn } from './home/login.model';
 
 @Injectable({
@@ -7,7 +8,9 @@ import { LogIn } from './home/login.model';
 })
 export class CentralService {
 
-  constructor(private route: Router) { }
+  constructor(
+    private route: Router
+  ) { }
 
   isLogged: boolean = false;
 
@@ -23,12 +26,15 @@ export class CentralService {
     }
   }
 
-  verificaUser(logar): void {
+  verificaUser(logar): boolean {
     if(logar.user == 'admin' && logar.password == 'admin'){
-      this.isLogged = true;
       alert("Logado com sucesso!");
+      this.isLogged = true;
+      return this.isLogged;
     } else {
       alert("Usuario ou senha incorreta");
+      this.isLogged = false;
+      return this.isLogged;
     }
   }
 
